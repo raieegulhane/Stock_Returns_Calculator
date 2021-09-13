@@ -26,6 +26,7 @@ body {
     background-color: var(--back);
     font-family: var(--body-font);
     text-align: center;
+    padding: 0rem 1.5rem;
 }
 
 .main {
