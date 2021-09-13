@@ -10,6 +10,7 @@
     /* colors */
     --back: #000;
     --sec-back: #222225;
+    --grey: #333;   
     --cream: #f9cdad;
     --red: #fe4365;
     --green: #83af98;
@@ -31,9 +32,9 @@ body {
     background-color: var(--sec-back);
     max-width: 400px;
     display: block;
-    margin: 3rem auto;
     padding: 1.5rem;
     border-radius: 2rem;
+    margin: 3rem auto;
 }
 
 h1 {
@@ -41,6 +42,8 @@ h1 {
     font-family: var(--head-font);
     font-size: 30px;
     padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--cream);
 }
 
 .content {
@@ -103,6 +106,42 @@ button:hover {
     margin: auto;
 }
 
-i {
-    fill: gold;
+footer {
+    color: var(--grey);
+    font-weight: bold;
+    display: block;
+    padding-top: 1rem;
+    border-top: 0.5px solid var(--cream);
+    margin: 3rem auto 0.5rem auto;
+}
+
+.social-media-title {
+    font-size: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+svg {
+    fill: var(--grey);
+    width: 35px;
+    height: 35px;
+    padding: 0.3rem 1.5rem;
+}
+
+svg:hover {
+    fill: var(--cream);
+}
+
+.github-soursecode {
+    font-size: 9px;
+}
+
+.git-repo {
+    color: var(--grey);
+}
+
+.git-repo:hover {
+    color: var(--cream);
 }
