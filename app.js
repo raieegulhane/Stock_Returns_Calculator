@@ -12,26 +12,39 @@ function profitLossCalculator (initial, current, quantity) {
     if (initial < current) {
         // profit
         var profit = (current - initial) * quantity;
-        var profitPercent = (profit / initial) * 100;
+        var profitPercent = ((profit / initial) * 100).toFixed(2);
 
-        message.style.color = 'green';
-        showMessage (`You have made profit of ₹ ${profit}. Profit percentage is ${profitPercent}%`);
+        message.style.color = '#83af98';
+        showMessage (`You have made profit of  ₹${profit}. \nProfit percentage is ${profitPercent}%`);
     } else if (initial > current) {
         // loss
         var loss = (initial - current) * quantity;
-        var lossPercent = (loss / initial) * 100;
+        var lossPercent = ((loss / initial) * 100).toFixed(2);
 
-        message.style.color = 'red';
-        showMessage (`You have made loss of ₹ ${loss}. Loss percentage is ${lossPercent}%`);
+        message.style.color = '#fe4365';
+        showMessage (`You have made loss of  ₹${loss}. \nLoss percentage is ${lossPercent}%`);
     } else {
+        message.style.color = "#355c7d";
         showMessage ("No profit or loss has occured.");
     }
 }
 
 function clickHandler() {
-    if (initialValueInput.value && currentValueInput.value && stockQuantityInput.value) {
-        profitLossCalculator(Number(initialValueInput.value), Number(currentValueInput.value), Number(stockQuantityInput.value));
+    var initialValue = initialValueInput.value;
+    var currentValue = currentValueInput.value;
+    var stockQuantity = stockQuantityInput.value;
+    if (initialValue && currentValue && stockQuantity) {
+        if (initialValue == 0 && currentValue >= 0 && stockQuantity >= 0) {
+            message.style.color = "#355c7d";
+            showMessage("You can't buy stocks for free. Enter valid amount.")
+        } else if (initialValue > 0 && currentValue >= 0 && stockQuantity >= 0) {
+            profitLossCalculator(Number(initialValue), Number(currentValue), Number(stockQuantity));
+        } else {
+            message.style.color = "#355c7d";
+            showMessage ('Enter valid input to continue');
+        }
     } else {
+        message.style.color = "#355c7d";
         showMessage ('Enter valid input to continue');
     }
 

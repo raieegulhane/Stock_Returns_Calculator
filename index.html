@@ -5,35 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/style.css">
 
-    <title>Profit And Loss Calculator</title>
+    <title>Stock Returns Calculator</title>
 </head>
 <body>
-    
+
     <header>
-        <h1>Stock Profit And Loss Calculator</h1>
+        <h1>Stock Returns Calculator</h1>
     </header>
 
-    <main>
-        <label for="initial-value">
-            Initial value:
+    <section class="main">
+        <div class="content">
+            <label for="initial-value">Purchase price:</label>
             <input type="number" id="initial-value">
-        </label>
-        <label for="current-value">
-            Current value:
+
+            <label for="current-value">Current price:</label>
             <input type="number" id="current-value">
-        </label>
-        <label for="stock-quantity">
-            Quantity of stocks:
+
+            <label for="stock-quantity">Quantity of stocks:</label>
             <input type="number" id="stock-quantity">
-        </label>
+    
+            <button id="button-check">Check</button>
+        </div>
+    </section>
 
-        <button id="button-check">Check</button>
+    <div id="message">Enter price and quantity to continue</div>
 
-        <div id="message"></div>
-    </main>
+    
+    <script src="/app.js" ></script>
 
-    <script src="/app.js"></script>
+
 </body>
 </html>
