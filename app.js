@@ -12,14 +12,14 @@ function profitLossCalculator (initial, current, quantity) {
     if (initial < current) {
         // profit
         var profit = (current - initial) * quantity;
-        var profitPercent = ((profit / initial) * 100).toFixed(2);
+        var profitPercent = ((profit / (initial * quantity)) * 100).toFixed(2);
 
         message.style.color = '#83af98';
         showMessage (`You have made profit of  ₹${profit}. \nProfit percentage is ${profitPercent}%`);
     } else if (initial > current) {
         // loss
         var loss = (initial - current) * quantity;
-        var lossPercent = ((loss / initial) * 100).toFixed(2);
+        var lossPercent = ((loss / (initial * quantity)) * 100).toFixed(2);
 
         message.style.color = '#fe4365';
         showMessage (`You have made loss of  ₹${loss}. \nLoss percentage is ${lossPercent}%`);
