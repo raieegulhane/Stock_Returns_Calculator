@@ -10,6 +10,5 @@ Deplyed on Netlify.
 
 APP PREVIEW:
 <br>
-<br>
 ![image](https://user-images.githubusercontent.com/64693025/133580040-d3c057b0-5dbc-4ad9-8819-d7cf54b55466.png)
 
