@@ -37,7 +37,7 @@ function clickHandler() {
         if (initialValue == 0 && currentValue >= 0 && stockQuantity >= 0) {
             message.style.color = "#355c7d";
             showMessage("You can't buy stocks for free. Enter valid amount.")
-        } else if (initialValue > 0 && currentValue >= 0 && stockQuantity >= 0) {
+        } else if (initialValue > 0 && currentValue >= 0 && stockQuantity > 0) {
             profitLossCalculator(Number(initialValue), Number(currentValue), Number(stockQuantity));
         } else {
             message.style.color = "#355c7d";
